@@ -1,0 +1,29 @@
+#!/usr/bin/env perl
+use v5.20.0;
+use warnings;
+use experimental qw(postderef signatures);
+
+use HTML::Entities qw(encode_entities);
+use Text::Markdown qw(markdown);
+use Tie::Function;
+use YAML::XS qw(LoadFile);
+
+tie my %H, 'Tie::Function' => \&encode_entities;
+tie my %M, 'Tie::Function' => \&markdown;
+
+my @files = <src/*.yaml>;
+
+my @tips  = sort {; $a->{category}  cmp $b->{category}
+                ||  $a->{title}     cmp $b->{title} }
+            map  {; LoadFile($_) }
+            @files;
+
+while (my $tip = shift @tips) {
+  say "<h2>$H{ $tip->{title} }</h2>";
+  say "  <div>$M{ $tip->{description} }</div>";
+  say "<h3>Tools</h3>\n";
+  say "  <ul>";
+  say "    <li>$M{ $_ }</li>\n" for $tip->{tools}->@*;
+  say "  </ul>";
+  say "<hr />" if @tips;
+}
