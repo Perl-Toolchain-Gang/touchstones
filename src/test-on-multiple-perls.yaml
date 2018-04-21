@@ -4,6 +4,8 @@ category: interop
 description: >
   If you support more than one major version of the perl binary (and you
   should), test your code with the relevant versions before releasing.  When
-  using XS, test with both threaded and unthreaded perls, at least.
+  using XS, test with both threaded and unthreaded perls, at least.  This
+  should include bleadperl, the in-development version of perl that will become
+  the next stable release.
 tools:
 - Travis CI lets you test your code against multiple perls.

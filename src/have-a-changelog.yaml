@@ -1,0 +1,12 @@
+title: Have a changelog.
+level: beginner
+category: style
+description: >
+  You should have a change log.  There are a few common names, but the most
+  common in the toolchain is Changes.  It should list, for each version, what
+  changed since the previous version, and when it was released.
+tools:
+- [Test::CPAN::Changes](https://metacpan.org/pod/Test::CPAN::Changes)
+- [Dist::Zilla::Plugin::CheckChangesHasContent](https://metacpan.org/pod/Dist::Zilla::Plugin::CheckChangesHasContent)
+  is a Dist::Zilla plugin for asserting that you have a changelog file and that
+  it has recent content.
