@@ -1,0 +1,9 @@
+title: Test your code on all supported perls.
+level: intermediate
+category: interop
+description: >
+  If you support more than one major version of the perl binary (and you
+  should), test your code with the relevant versions before releasing.  When
+  using XS, test with both threaded and unthreaded perls, at least.
+tools:
+- Travis CI lets you test your code against multiple perls.

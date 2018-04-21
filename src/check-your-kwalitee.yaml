@@ -1,0 +1,16 @@
+title: Check what CPANTS says about your distribution's kwalitee.
+level: intermediate
+category: style
+description: >
+  [CPANTS](https://cpants.cpanauthors.org/) is an automated testing service to
+  look for a variety of release quality touchstones.  Some of these touchstones
+  are represented here as other tips, but not all.  CPANTS will give you a
+  detailed report on what your distribution might be getting wrong (or right).
+tools:
+- >
+  [cpants_lint.pl](https://metacpan.org/pod/distribution/App-CPANTS-Lint/bin/cpants_lint.pl)
+  runs all the CPANTS tests locally against your distribution tarball before
+  you release it.
+- If you don't want to install the full CPANTS stack locally, you can upload
+  your distribution (in trial form) to the CPAN and wait for results on the
+  [CPANTS](https://cpants.cpanauthors.org/) site.

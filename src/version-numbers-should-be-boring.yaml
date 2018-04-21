@@ -1,0 +1,12 @@
+title: Version numbers should be boring.
+level: intermediate
+category: interop
+description: >
+  Perl has an unfortunate laxness in how versions can be expressed.  To avoid
+  edge cases anywhere, versions should be expressed as either `x.yyy` or
+  `x.yyyyyy`.
+
+  *TODO*: Decide what the standards are for trial releases:  underscore or dist
+  name?
+tools:
+  - (no known tools)

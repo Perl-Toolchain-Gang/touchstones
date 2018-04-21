@@ -1,0 +1,23 @@
+title: Makefile.PL or Build.PL should require a minimum perl version.
+level: intermediate
+category: interop
+description: >
+  Don't leave it up to anybody to guess what version of perl your software
+  requires.  Document it.  Don't just document it in your META file, put it as
+  a hard `use 5.xxx` in your build program.
+tools:
+- >
+  [Perl::MinimumVersion](https://metacpan.org/release/Perl-MinimumVersion)
+  can help determine what version your code might require, and comes with a
+  `perlvar`, which provides an explanation of syntax markers.
+- >
+  [Perl::MinimumVersion::Fast](https://metacpan.org/release/Perl-MinimumVersion-Fast)
+  can help determine what version your code might require.
+- >
+  [Test::MinimumVersion](https://metacpan.org/pod/Test::MinimumVersion)
+  is a Test library that uses Perl::MinimumVersion to assert that your code
+  doesn't require a newer perl than you describe.
+- >
+  [Test::MinimumVersion::Fast](https://metacpan.org/pod/Test::MinimumVersion::Fast)
+  is a Test library that uses Perl::MinimumVersion::Fast to assert that your
+  code doesn't require a newer perl than you describe.

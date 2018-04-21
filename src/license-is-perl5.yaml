@@ -1,0 +1,11 @@
+title: Use the Perl 5
+level: advanced
+category: legal
+description: >
+  Your code might be going into core, or at least be used by people already
+  relying on a lot of other Perl code.  Don't complicate lives by picking an
+  unusual license.  In fact, don't pick anything other than the standard
+  license used with Perl 5 software: the Perl 5 license.  Your `META.json` file
+  and LICENSE file should both clearly indicate this.
+tools:
+  - (no known tools)
